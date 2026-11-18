@@ -439,20 +439,24 @@
     reveals.forEach((el) => el.classList.add('is-in'));
   }
 
-  const autoVideos = document.querySelectorAll('[data-autoplay-video]');
+  const autoVideos = document.querySelectorAll('[data-autoplay-video], [data-pin-video]');
   if ('IntersectionObserver' in window) {
     const videoObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const node = entry.target;
           if (entry.isIntersecting) node.play().catch(() => {});
-          else node.pause();
+          else if (!node.hasAttribute('data-pin-video')) node.pause();
         });
       },
-      { threshold: 0.4 }
+      { threshold: 0.25 }
     );
     autoVideos.forEach((node) => videoObserver.observe(node));
   }
+
+  const pin = document.querySelector('[data-product-pin]');
+  const pinShade = document.querySelector('[data-pin-shade]');
+  const pinVideo = document.querySelector('[data-pin-video]');
 
   let lastY = window.scrollY;
   function onScroll() {
@@ -473,6 +477,18 @@
       const shift = Math.max(-48, Math.min(48, -mid * speed));
       el.style.transform = `translate3d(0, ${shift.toFixed(2)}px, 0)`;
     });
+
+    if (pin && pinShade) {
+      const rect = pin.getBoundingClientRect();
+      const travel = Math.max(1, pin.offsetHeight - window.innerHeight);
+      const scrolled = Math.min(travel, Math.max(0, -rect.top));
+      const t = scrolled / travel;
+      pinShade.style.opacity = String(0.55 + t * 0.38);
+      if (pinVideo && !reduceMotion) {
+        const zoom = 1.04 + t * 0.06;
+        pinVideo.style.transform = `scale(${zoom.toFixed(3)})`;
+      }
+    }
 
     lastY = y;
   }

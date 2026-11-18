@@ -34,7 +34,7 @@
   </script>
   <link rel="stylesheet" href="assets/brand.css">
 </head>
-<body class="brand" data-page="white">
+<body class="brand product-page is-white" data-page="white">
   <div class="grain" aria-hidden="true"></div>
   <div class="progress" id="progress" aria-hidden="true"></div>
 
@@ -56,175 +56,182 @@
   </header>
 
   <main>
-    <section class="product-hero is-white">
-      <div class="wrap product-hero-grid">
-        <div class="product-copy">
-          <p class="kicker reveal" data-i18n="whiteKicker">Collection 02</p>
-          <h1 class="reveal reveal-delay-1">
-            <span data-i18n="whiteHeroA">White Wine</span>
-            <em data-i18n="whiteHeroB">Collection</em>
-          </h1>
-          <p class="lede reveal reveal-delay-2" data-i18n="whiteLede">A brighter oil for the sea. Clean fruit, citrus lift, and a finish that leaves room for shellfish and white wine.</p>
-          <div class="chip-row reveal reveal-delay-3">
-            <span class="chip" data-i18n="chipBursa">Bursa, Türkiye</span>
-            <span class="chip" data-i18n="chipEstate">Single estate</span>
-            <span class="chip" data-i18n="chipHand">Hand picked</span>
-            <span class="chip" data-i18n="chipVolume">500 ml</span>
-          </div>
-          <div class="hero-actions reveal reveal-delay-3">
-            <a class="btn-solid" href="#reserve" data-reserve="white" data-i18n="reserveBtn">Reserve this bottle</a>
-            <a class="btn-ghost" href="#profile" data-i18n="whiteTasteKicker">The profile</a>
-          </div>
-        </div>
-        <div class="bottle-stage reveal">
-          <img src="media/white-bottle.jpg" alt="OLIEN ARTUK White Wine Collection bottle" data-parallax="0.08">
-        </div>
-      </div>
-    </section>
-
-    <section class="story-band is-flip wrap-wide">
-      <div class="media-panel reveal">
-        <video data-autoplay-video muted loop playsinline preload="metadata" poster="media/white-bottle.jpg">
+    <section class="product-pin" data-product-pin>
+      <div class="product-pin-media">
+        <video data-pin-video muted loop playsinline autoplay preload="auto" poster="media/white-bottle.jpg">
           <source src="media/white-collection.mp4" type="video/mp4">
         </video>
-        <div class="shade"></div>
-        <p class="caption" data-i18n="whiteVideoCap">Courtyard light. The bottle holds the morning harvest.</p>
+        <div class="product-pin-shade" data-pin-shade></div>
       </div>
-      <div class="sticky-frame">
-        <div class="media-panel reveal">
-          <img src="media/white-table.jpg" alt="White Wine Collection with seafood lunch" data-parallax="0.12">
-          <div class="shade"></div>
-          <p class="caption" data-i18n="whiteTableCap">For oysters, grilled fish, and a pale glass of white.</p>
-        </div>
+
+      <div class="product-pin-content">
+        <section class="product-panel is-hero">
+          <div class="wrap product-hero-grid">
+            <div class="product-copy">
+              <p class="kicker reveal" data-i18n="whiteKicker">Collection 02</p>
+              <h1 class="reveal reveal-delay-1">
+                <span data-i18n="whiteHeroA">White Wine</span>
+                <em data-i18n="whiteHeroB">Collection</em>
+              </h1>
+              <p class="lede reveal reveal-delay-2" data-i18n="whiteLede">A brighter oil for the sea. Clean fruit, citrus lift, and a finish that leaves room for shellfish and white wine.</p>
+              <div class="chip-row reveal reveal-delay-3">
+                <span class="chip" data-i18n="chipBursa">Bursa, Türkiye</span>
+                <span class="chip" data-i18n="chipEstate">Single estate</span>
+                <span class="chip" data-i18n="chipHand">Hand picked</span>
+                <span class="chip" data-i18n="chipVolume">500 ml</span>
+              </div>
+              <div class="hero-actions reveal reveal-delay-3">
+                <a class="btn-solid" href="#reserve" data-reserve="white" data-i18n="reserveBtn">Reserve this bottle</a>
+                <a class="btn-ghost" href="#profile" data-i18n="whiteTasteKicker">The profile</a>
+              </div>
+            </div>
+            <div class="bottle-float reveal">
+              <img src="media/white-bottle.jpg" alt="OLIEN ARTUK White Wine Collection bottle" data-parallax="0.08">
+            </div>
+          </div>
+        </section>
+
+        <section class="product-panel" id="profile">
+          <div class="wrap">
+            <div class="feature-sheet reveal">
+              <p class="kicker" data-i18n="whiteTasteKicker">The profile</p>
+              <h2 class="section-title" data-i18n="whiteTasteTitle">What you taste.</h2>
+              <div class="feature-grid">
+                <article class="feature-card">
+                  <span class="num">01</span>
+                  <h3 data-i18n="whiteF1">Nose</h3>
+                  <p data-i18n="whiteF1Body">Fresh green fruit, lemon peel, cool herbs.</p>
+                </article>
+                <article class="feature-card">
+                  <span class="num">02</span>
+                  <h3 data-i18n="whiteF2">Palate</h3>
+                  <p data-i18n="whiteF2Body">Bright olive, soft bitterness, a clean mid-palate.</p>
+                </article>
+                <article class="feature-card">
+                  <span class="num">03</span>
+                  <h3 data-i18n="whiteF3">Finish</h3>
+                  <p data-i18n="whiteF3Body">Light, precise, ready for seafood and white wine.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="product-panel">
+          <div class="wrap">
+            <div class="feature-sheet reveal">
+              <p class="kicker" data-i18n="whiteSpecKicker">The details</p>
+              <h2 class="section-title" data-i18n="whiteSpecTitle">Made to be measured.</h2>
+              <div class="spec-grid">
+                <article class="spec-card">
+                  <strong data-i18n="whiteS1">Origin</strong>
+                  <p data-i18n="whiteS1Body">Bursa, Türkiye</p>
+                </article>
+                <article class="spec-card">
+                  <strong data-i18n="whiteS2">Style</strong>
+                  <p data-i18n="whiteS2Body">Extra virgin · Cold pressed</p>
+                </article>
+                <article class="spec-card">
+                  <strong data-i18n="whiteS3">Estate</strong>
+                  <p data-i18n="whiteS3Body">Hand-picked single estate</p>
+                </article>
+                <article class="spec-card">
+                  <strong data-i18n="whiteS4">Volume</strong>
+                  <p data-i18n="whiteS4Body">500 ml dark glass</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="product-panel">
+          <div class="wrap">
+            <div class="feature-sheet reveal">
+              <p class="kicker" data-i18n="whitePairKicker">The table</p>
+              <h2 class="section-title" data-i18n="whitePairTitle">How to pour it.</h2>
+              <div class="pair-grid">
+                <article class="pair-card">
+                  <h3 data-i18n="whiteP1">Sea</h3>
+                  <p data-i18n="whiteP1Body">Oysters, grilled fish, lemon.</p>
+                </article>
+                <article class="pair-card">
+                  <h3 data-i18n="whiteP2">Wine</h3>
+                  <p data-i18n="whiteP2Body">Crisp whites and pale afternoon light.</p>
+                </article>
+                <article class="pair-card">
+                  <h3 data-i18n="whiteP3">Herb</h3>
+                  <p data-i18n="whiteP3Body">Parsley, olive, a crust of bread.</p>
+                </article>
+              </div>
+              <div class="lifestyle-frame">
+                <img src="media/white-table.jpg" alt="White Wine Collection with seafood lunch">
+                <div class="shade"></div>
+                <p class="caption" data-i18n="whiteTableCap">For oysters, grilled fish, and a pale glass of white.</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
 
-    <section id="profile">
-      <div class="wrap">
-        <p class="kicker reveal" data-i18n="whiteTasteKicker">The profile</p>
-        <h2 class="section-title reveal reveal-delay-1" data-i18n="whiteTasteTitle">What you taste.</h2>
-        <div class="feature-grid">
-          <article class="feature-card reveal">
-            <span class="num">01</span>
-            <h3 data-i18n="whiteF1">Nose</h3>
-            <p data-i18n="whiteF1Body">Fresh green fruit, lemon peel, cool herbs.</p>
-          </article>
-          <article class="feature-card reveal reveal-delay-1">
-            <span class="num">02</span>
-            <h3 data-i18n="whiteF2">Palate</h3>
-            <p data-i18n="whiteF2Body">Bright olive, soft bitterness, a clean mid-palate.</p>
-          </article>
-          <article class="feature-card reveal reveal-delay-2">
-            <span class="num">03</span>
-            <h3 data-i18n="whiteF3">Finish</h3>
-            <p data-i18n="whiteF3Body">Light, precise, ready for seafood and white wine.</p>
-          </article>
+    <div class="product-after">
+      <section>
+        <div class="wrap">
+          <div class="cross-link reveal">
+            <img src="media/red-bottle.jpg" alt="OLIEN ARTUK Red Wine Collection bottle">
+            <div>
+              <p class="kicker" data-i18n="crossKicker">Also from the estate</p>
+              <h2 class="section-title" data-i18n="crossRedTitle">Prefer a darker pour?</h2>
+              <p class="lede" data-i18n="crossRedBody">Open the Red Wine Collection for grilled cuts and evening tables.</p>
+              <div class="hero-actions">
+                <a class="btn-line" href="red-wine-collection.html" data-i18n="crossCta">Open collection</a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="wrap">
-        <p class="kicker reveal" data-i18n="whiteSpecKicker">The details</p>
-        <h2 class="section-title reveal reveal-delay-1" data-i18n="whiteSpecTitle">Made to be measured.</h2>
-        <div class="spec-grid">
-          <article class="spec-card reveal">
-            <strong data-i18n="whiteS1">Origin</strong>
-            <p data-i18n="whiteS1Body">Bursa, Türkiye</p>
-          </article>
-          <article class="spec-card reveal reveal-delay-1">
-            <strong data-i18n="whiteS2">Style</strong>
-            <p data-i18n="whiteS2Body">Extra virgin · Cold pressed</p>
-          </article>
-          <article class="spec-card reveal reveal-delay-2">
-            <strong data-i18n="whiteS3">Estate</strong>
-            <p data-i18n="whiteS3Body">Hand-picked single estate</p>
-          </article>
-          <article class="spec-card reveal reveal-delay-3">
-            <strong data-i18n="whiteS4">Volume</strong>
-            <p data-i18n="whiteS4Body">500 ml dark glass</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <p class="kicker reveal" data-i18n="whitePairKicker">The table</p>
-        <h2 class="section-title reveal reveal-delay-1" data-i18n="whitePairTitle">How to pour it.</h2>
-        <div class="pair-grid">
-          <article class="pair-card reveal">
-            <h3 data-i18n="whiteP1">Sea</h3>
-            <p data-i18n="whiteP1Body">Oysters, grilled fish, lemon.</p>
-          </article>
-          <article class="pair-card reveal reveal-delay-1">
-            <h3 data-i18n="whiteP2">Wine</h3>
-            <p data-i18n="whiteP2Body">Crisp whites and pale afternoon light.</p>
-          </article>
-          <article class="pair-card reveal reveal-delay-2">
-            <h3 data-i18n="whiteP3">Herb</h3>
-            <p data-i18n="whiteP3Body">Parsley, olive, a crust of bread.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap">
-        <div class="cross-link reveal">
-          <img src="media/red-bottle.jpg" alt="OLIEN ARTUK Red Wine Collection bottle">
+      <section id="reserve">
+        <div class="wrap reserve-grid">
           <div>
-            <p class="kicker" data-i18n="crossKicker">Also from the estate</p>
-            <h2 class="section-title" data-i18n="crossRedTitle">Prefer a darker pour?</h2>
-            <p class="lede" data-i18n="crossRedBody">Open the Red Wine Collection for grilled cuts and evening tables.</p>
-            <div class="hero-actions">
-              <a class="btn-line" href="red-wine-collection.html" data-i18n="crossCta">Open collection</a>
+            <p class="kicker reveal" data-i18n="formKicker">Reserve</p>
+            <h2 class="section-title reveal reveal-delay-1" data-i18n="formTitle">Hold a bottle for your table.</h2>
+            <p class="lede reveal reveal-delay-2" data-i18n="formLede">Tell us which collection to set aside. This is a request only. No payment is taken here.</p>
+          </div>
+          <div class="reserve-card reveal">
+            <form id="reserve-form">
+              <div class="fields">
+                <label>
+                  <span data-i18n="labelName">Name</span>
+                  <input id="reserve-name" name="name" type="text" required autocomplete="name" data-i18n-placeholder="phName" placeholder="Your name">
+                </label>
+                <label>
+                  <span data-i18n="labelEmail">Email</span>
+                  <input id="reserve-email" name="email" type="email" required autocomplete="email" data-i18n-placeholder="phEmail" placeholder="you@example.com">
+                </label>
+                <label>
+                  <span data-i18n="labelBottle">Collection</span>
+                  <select id="bottle" name="bottle" required>
+                    <option value="" data-i18n="bottlePlaceholder">Choose a collection</option>
+                    <option value="red" data-i18n="redTitle">Red Wine Collection</option>
+                    <option value="white" selected data-i18n="whiteTitle">White Wine Collection</option>
+                  </select>
+                </label>
+                <label>
+                  <span data-i18n="labelNote">Note</span>
+                  <textarea id="reserve-note" name="note" data-i18n-placeholder="phNote" placeholder="Optional note"></textarea>
+                </label>
+                <button class="btn-solid" type="submit" data-i18n="submit">Request this lot</button>
+              </div>
+            </form>
+            <div id="reserve-done" class="done" hidden role="status">
+              <h3 data-i18n="doneTitle">The bottle is held.</h3>
+              <p data-i18n="doneBody">This is a request only. We will write to you about this lot. No payment was taken.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="reserve">
-      <div class="wrap reserve-grid">
-        <div>
-          <p class="kicker reveal" data-i18n="formKicker">Reserve</p>
-          <h2 class="section-title reveal reveal-delay-1" data-i18n="formTitle">Hold a bottle for your table.</h2>
-          <p class="lede reveal reveal-delay-2" data-i18n="formLede">Tell us which collection to set aside. This is a request only. No payment is taken here.</p>
-        </div>
-        <div class="reserve-card reveal">
-          <form id="reserve-form">
-            <div class="fields">
-              <label>
-                <span data-i18n="labelName">Name</span>
-                <input id="reserve-name" name="name" type="text" required autocomplete="name" data-i18n-placeholder="phName" placeholder="Your name">
-              </label>
-              <label>
-                <span data-i18n="labelEmail">Email</span>
-                <input id="reserve-email" name="email" type="email" required autocomplete="email" data-i18n-placeholder="phEmail" placeholder="you@example.com">
-              </label>
-              <label>
-                <span data-i18n="labelBottle">Collection</span>
-                <select id="bottle" name="bottle" required>
-                  <option value="" data-i18n="bottlePlaceholder">Choose a collection</option>
-                  <option value="red" data-i18n="redTitle">Red Wine Collection</option>
-                  <option value="white" selected data-i18n="whiteTitle">White Wine Collection</option>
-                </select>
-              </label>
-              <label>
-                <span data-i18n="labelNote">Note</span>
-                <textarea id="reserve-note" name="note" data-i18n-placeholder="phNote" placeholder="Optional note"></textarea>
-              </label>
-              <button class="btn-solid" type="submit" data-i18n="submit">Request this lot</button>
-            </div>
-          </form>
-          <div id="reserve-done" class="done" hidden role="status">
-            <h3 data-i18n="doneTitle">The bottle is held.</h3>
-            <p data-i18n="doneBody">This is a request only. We will write to you about this lot. No payment was taken.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </main>
 
   <footer class="site-footer">
