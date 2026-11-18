@@ -455,6 +455,7 @@
   }
 
   const pin = document.querySelector('[data-product-pin]');
+  const pinMedia = document.querySelector('.product-pin-media');
   const pinShade = document.querySelector('[data-pin-shade]');
   const pinVideo = document.querySelector('[data-pin-video]');
 
@@ -478,15 +479,19 @@
       el.style.transform = `translate3d(0, ${shift.toFixed(2)}px, 0)`;
     });
 
-    if (pin && pinShade) {
+    if (pin && pinMedia) {
       const rect = pin.getBoundingClientRect();
-      const travel = Math.max(1, pin.offsetHeight - window.innerHeight);
-      const scrolled = Math.min(travel, Math.max(0, -rect.top));
-      const t = scrolled / travel;
-      pinShade.style.opacity = String(0.55 + t * 0.38);
-      if (pinVideo && !reduceMotion) {
-        const zoom = 1.04 + t * 0.06;
-        pinVideo.style.transform = `scale(${zoom.toFixed(3)})`;
+      const visible = rect.bottom > 40 && rect.top < window.innerHeight - 40;
+      pinMedia.classList.toggle('is-away', !visible);
+      if (visible && pinVideo) pinVideo.play().catch(() => {});
+      if (pinShade) {
+        const travel = Math.max(1, pin.offsetHeight - window.innerHeight);
+        const scrolled = Math.min(travel, Math.max(0, -rect.top));
+        const t = scrolled / travel;
+        pinShade.style.opacity = String(0.55 + t * 0.4);
+        if (pinVideo && !reduceMotion) {
+          pinVideo.style.transform = `scale(${(1.02 + t * 0.05).toFixed(3)})`;
+        }
       }
     }
 

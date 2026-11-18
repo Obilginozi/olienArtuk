@@ -590,51 +590,63 @@ select {
   color: var(--ink);
 }
 
-/* Product page — sticky full-bleed video stage */
+/* Product page — fixed full-bleed video stage */
+body.product-page {
+  background: #0e1114;
+}
+
 .product-pin {
   position: relative;
+  z-index: 1;
 }
 
 .product-pin-media {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  height: 100svh;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
   overflow: hidden;
-  background: #101418;
+  background: #0e1114;
+  pointer-events: none;
+}
+
+.product-pin-media.is-away {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .product-pin-media video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
-  transform: scale(1.04);
+  transform: scale(1.02);
+  transform-origin: center center;
 }
 
 .product-pin-shade {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(10, 12, 14, 0.28), rgba(10, 12, 14, 0.42) 45%, rgba(10, 12, 14, 0.62)),
-    linear-gradient(90deg, rgba(10, 12, 14, 0.35), transparent 55%);
-  opacity: 0.72;
+    linear-gradient(180deg, rgba(10, 12, 14, 0.22), rgba(10, 12, 14, 0.38) 48%, rgba(10, 12, 14, 0.58)),
+    linear-gradient(90deg, rgba(10, 12, 14, 0.42), transparent 58%);
+  opacity: 0.7;
   pointer-events: none;
-  transition: opacity 0.2s linear;
 }
 
 .product-pin-content {
   position: relative;
   z-index: 1;
-  margin-top: -100vh;
-  margin-top: -100svh;
-  padding-bottom: 8vh;
+  padding-bottom: 10vh;
 }
 
 .product-panel {
   min-height: 100vh;
-  min-height: 100svh;
+  min-height: 100dvh;
   display: grid;
   align-items: center;
   padding: 120px 0 72px;
@@ -696,10 +708,11 @@ select {
 }
 
 .bottle-float img {
-  width: min(280px, 58%);
+  width: min(300px, 62%);
   height: auto;
   display: block;
-  filter: drop-shadow(0 28px 50px rgba(0, 0, 0, 0.45));
+  mix-blend-mode: multiply;
+  filter: drop-shadow(0 28px 50px rgba(0, 0, 0, 0.35));
   will-change: transform;
 }
 
