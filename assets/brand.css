@@ -2559,6 +2559,103 @@ body.home-page .lede {
   max-width: 14ch;
 }
 
+.home-voices {
+  padding: 112px 0;
+  background:
+    radial-gradient(ellipse 55% 45% at 0% 100%, rgba(196, 165, 116, 0.08), transparent 55%),
+    var(--home-deep);
+  border-top: 1px solid rgba(232, 235, 230, 0.1);
+}
+
+.home-voices-intro {
+  max-width: 36rem;
+  margin-bottom: 56px;
+}
+
+.home-voices-intro .section-title {
+  max-width: 14ch;
+}
+
+.home-voices-grid {
+  display: grid;
+  gap: 48px;
+}
+
+.home-voices-quotes {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid rgba(232, 235, 230, 0.14);
+}
+
+.home-voice {
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(232, 235, 230, 0.14);
+}
+
+.home-voice-name {
+  margin: 0 0 12px;
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.home-voice-context {
+  margin: 0 0 18px;
+  max-width: 36rem;
+  color: var(--home-muted);
+  line-height: 1.65;
+}
+
+.home-voice blockquote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.home-voice blockquote p {
+  margin: 0;
+  max-width: 28rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.45rem, 2.6vw, 1.95rem);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--home-ink);
+}
+
+.home-voice-source {
+  margin: 18px 0 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-voice-source a {
+  color: var(--home-oil);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(111, 138, 114, 0.35);
+}
+
+.home-voice-source a:hover {
+  color: var(--home-ink);
+  border-bottom-color: rgba(232, 235, 230, 0.45);
+}
+
+.home-voices-aside {
+  padding-top: 8px;
+}
+
+.home-voices-tweet {
+  margin-top: 20px;
+  min-height: 180px;
+}
+
+.home-voices-tweet .twitter-tweet {
+  margin: 0 !important;
+}
+
 .home-craft {
   padding: 112px 0;
   background:
@@ -2710,6 +2807,12 @@ body.home-page .home-footer a:hover {
 }
 
 @media (min-width: 900px) {
+  .home-voices-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 72px;
+    align-items: start;
+  }
+
   .home-craft-grid,
   .home-reserve-grid {
     grid-template-columns: 0.95fr 1.05fr;
@@ -2744,6 +2847,7 @@ body.home-page .home-footer a:hover {
   }
 
   .home-chapter-intro,
+  .home-voices,
   .home-craft,
   .home-reserve {
     padding-left: 0;
@@ -2754,6 +2858,7 @@ body.home-page .home-footer a:hover {
     padding: 72px 0 36px;
   }
 
+  .home-voices,
   .home-craft,
   .home-reserve {
     padding-top: 80px;
