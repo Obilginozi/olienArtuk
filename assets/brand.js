@@ -56,9 +56,7 @@
       voicesRamsay2Context: 'Talking to Good Food, he described his daughter Tilly arriving at a friend’s birthday with oil instead of wine:',
       voicesRamsay2Quote: 'I was looking at Tilly last week going to a friend’s 25th birthday party and she’s taking a litre of olive oil. And that’s how they want to live.',
       voicesRamsay2Source: 'Good Food',
-      voicesVedatContext: 'On the moment bread and aromatic extra virgin land on the table — his words from X.',
-      voicesVedatQuote: 'The moment I sit down and good sourdough arrives with aromatic extra virgin olive oil, my willpower collapses. If they keep refreshing it, there’s always a chance I’ll be full before the main course.',
-      voicesVedatLink: 'View on X',
+      voicesVedatContext: 'On the moment bread and aromatic extra virgin land on the table — his words on X. Tap the post to open it and use X’s translation if you need English.',
       whyKicker: 'Why these oils',
       whyTitle: 'Written for the plate. Proven by the lot.',
       whyLede: 'Intensity chosen for the meal. Freshness checked by the lot. Dark glass for what the press released.',
@@ -381,9 +379,7 @@
       voicesRamsay2Context: 'Good Food’a konuşurken, kızı Tilly’nin bir arkadaşının doğum gününe şarap yerine yağla gittiğini anlatıyor:',
       voicesRamsay2Quote: 'Geçen hafta Tilly’nin bir arkadaşının 25. yaş gününe gittiğini görüyordum — bir litre zeytinyağı götürüyor. İşte böyle yaşamak istiyorlar.',
       voicesRamsay2Source: 'Good Food',
-      voicesVedatContext: 'Ekmek ve aromatik sızmanın masaya indiği an üzerine — sözleri, X’ten.',
-      voicesVedatQuote: 'Masaya oturur oturmaz iyi ekşi mayalı ekmek ve aromatik sızma zeytinyağı gelince iradem tamamen sıfırlanıyor. Bittikçe tazelerlerse ana yemeği görmeden doyma ihtimalim hep var.',
-      voicesVedatLink: 'X’te gör',
+      voicesVedatContext: 'Ekmek ve aromatik sızmanın masaya indiği an üzerine — sözleri X’te. Çeviri için gönderiye dokunup X’in çevirisini kullanın.',
       whyKicker: 'Neden bu yağlar',
       whyTitle: 'Tabağa yazılır. Lotla kanıtlanır.',
       whyLede: 'Yoğunluk yemeğe göre. Tazelik lotla kontrol. Sıkımın bıraktığı için koyu cam.',
@@ -679,6 +675,9 @@
   const tweetHost = document.querySelector('[data-tweet-embed]');
   const tweetId = '2124034763149426959';
   const tweetUrl = `https://x.com/vedatmilor/status/${tweetId}`;
+  const tweetOriginal =
+    'Masaya oturur oturmaz iyi ekşi mayalı ekmek ve aromatik sızma zeytinyağı gelince iradem tamamen sıfırlanıyor. Bittikçe tazelerlerse ana yemeği görmeden doyma ihtimalim hep var.';
+  let tweetMounted = false;
 
   function ensureTwitterScript() {
     if (document.querySelector('script[data-olien-twitter]')) return;
@@ -691,37 +690,22 @@
   }
 
   function mountTweet() {
-    if (!tweetHost) return;
-    const dict = copy[lang];
-    const quote = dict.voicesVedatQuote || '';
-    const linkLabel = dict.voicesVedatLink || 'View on X';
-
-    if (lang === 'tr') {
-      ensureTwitterScript();
-      tweetHost.innerHTML = `
-        <blockquote class="twitter-tweet" data-theme="dark" data-lang="tr" data-dnt="true">
-          <p lang="tr" dir="ltr">${quote}</p>
-          &mdash; Vedat Milor (@vedatmilor)
-          <a href="${tweetUrl}">21 Kasım 2026</a>
-        </blockquote>
-      `;
-      const load = () => {
-        if (window.twttr && window.twttr.widgets) window.twttr.widgets.load(tweetHost);
-      };
-      if (window.twttr && window.twttr.ready) window.twttr.ready(load);
-      else load();
-      setTimeout(load, 400);
-      return;
-    }
-
+    if (!tweetHost || tweetMounted) return;
+    tweetMounted = true;
+    ensureTwitterScript();
     tweetHost.innerHTML = `
-      <blockquote class="home-voices-tweet-quote">
-        <p>${quote}</p>
+      <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true">
+        <p lang="tr" dir="ltr">${tweetOriginal}</p>
+        &mdash; Vedat Milor (@vedatmilor)
+        <a href="${tweetUrl}">21 Kasım 2026</a>
       </blockquote>
-      <p class="home-voice-source">
-        <a href="${tweetUrl}" target="_blank" rel="noopener noreferrer">${linkLabel}</a>
-      </p>
     `;
+    const load = () => {
+      if (window.twttr && window.twttr.widgets) window.twttr.widgets.load(tweetHost);
+    };
+    if (window.twttr && window.twttr.ready) window.twttr.ready(load);
+    else load();
+    setTimeout(load, 400);
   }
 
   function applyLang(next) {
