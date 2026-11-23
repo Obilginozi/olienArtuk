@@ -2902,6 +2902,11 @@ body.contact-page .lede {
   margin-top: 34px;
 }
 
+body.contact-page .btn-home {
+  background: var(--contact-ink);
+  color: var(--contact-deep);
+}
+
 .contact-write {
   padding: 112px 0 120px;
   background:
