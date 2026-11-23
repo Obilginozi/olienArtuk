@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Olive, Reimagined. — OLIEN ARTUK</title>
+  <meta name="description" content="OLIEN ARTUK jewellery. Timeless jewellery inspired by the olive — a symbol of life, wisdom and abundance. Quiet luxury, Mediterranean heritage.">
+  <meta name="theme-color" content="#0E1411">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@360;460;560&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#121417',
+            leaf: '#2F4A3A',
+            accent: '#4A6670',
+            snow: '#FFFFFF',
+            mist: '#F4F6F8',
+            paper: '#E8ECF0',
+            clay: '#5A6870',
+            wine: '#3A2A2C'
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            body: ['Manrope', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/brand.css">
+</head>
+<body class="brand jewellery-page" data-page="jewellery">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="site-header is-jewellery" id="site-header">
+    <a class="wordmark" href="index.html">OLIEN ARTUK</a>
+    <nav id="nav" class="nav" aria-label="Sections">
+      <a href="index.html" data-i18n="navHome">Home</a>
+      <a href="red-wine-collection.html" data-i18n="navRed">Red Wine</a>
+      <a href="white-wine-collection.html" data-i18n="navWhite">White Wine</a>
+      <a href="carpaccio-collection.html" data-i18n="navCarpaccio">Carpaccio</a>
+      <a class="is-active" href="olive-jewellery.html" data-i18n="navJewellery">Jewellery</a>
+      <a href="#reserve" data-i18n="navReserve">Reserve</a>
+      <a href="contact.html" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="tools">
+      <div class="lang" role="group" data-i18n-aria="langGroup" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+      </div>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav" data-i18n="menuOpen">Menu</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="jewellery-hero" aria-label="OLIEN ARTUK Jewellery">
+      <div class="jewellery-hero-media" aria-hidden="true">
+        <img
+          class="jewellery-hero-image"
+          src="media/jewellery-hero.jpg"
+          alt=""
+          width="1600"
+          height="2000"
+          decoding="async"
+          data-jewellery-img
+        >
+        <div class="jewellery-hero-veil"></div>
+      </div>
+      <div class="jewellery-hero-copy">
+        <p class="jewellery-brand reveal">OLIEN ARTUK</p>
+        <h1 class="reveal reveal-delay-1" data-i18n="jewHeroTitle">The Olive, Reimagined.</h1>
+        <p class="jewellery-hero-lede reveal reveal-delay-2" data-i18n="jewHeroLede">Timeless jewellery inspired by the olive — a symbol of life, wisdom and abundance.</p>
+        <div class="jewellery-hero-actions reveal reveal-delay-3">
+          <a class="btn-jewellery" href="#pieces" data-i18n="jewHeroCta">View the pieces</a>
+          <a class="btn-jewellery-ghost" href="#reserve" data-i18n="jewHeroReserve">Reserve a piece</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="jewellery-bridge" id="essence" aria-labelledby="jewellery-bridge-title">
+      <div class="jewellery-bridge-frame">
+        <p class="jewellery-bridge-kicker reveal" data-i18n="jewSymbolKicker">Quiet luxury · Mediterranean heritage</p>
+        <div class="jewellery-bridge-row">
+          <h2 id="jewellery-bridge-title" class="jewellery-bridge-title reveal reveal-delay-1" data-i18n="jewSymbolTitle">Wear the essence of the olive.</h2>
+          <p class="jewellery-bridge-lede reveal reveal-delay-2" data-i18n="jewSymbolLede">A symbol of abundance, wisdom and vitality. Nature, transformed into timeless jewellery.</p>
+        </div>
+        <div class="jewellery-bridge-foot reveal reveal-delay-3" id="pieces">
+          <span class="jewellery-bridge-foot-label" data-i18n="jewPiecesKicker">The pieces</span>
+          <span class="jewellery-bridge-foot-rule" aria-hidden="true"></span>
+          <span class="jewellery-bridge-foot-line" data-i18n="jewPiecesTitle">Two olives. Worn with elegance.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="jewellery-pieces" aria-label="The pieces">
+      <article class="jewellery-set is-green" id="green">
+        <div class="jewellery-set-copy wrap">
+          <p class="kicker reveal" data-i18n="jewGreenKicker">Green olive</p>
+          <h3 class="reveal reveal-delay-1" data-i18n="jewGreenTitle">Green olive necklace &amp; brooch</h3>
+          <p class="lede reveal reveal-delay-2" data-i18n="jewGreenBody">Choose a braided cord or a gold chain necklace with a green olive pendant, and a matching green olive brooch — an emblem of abundance and vitality.</p>
+        </div>
+        <div class="jewellery-set-gallery is-triple">
+          <figure class="jewellery-shot reveal">
+            <img
+              src="media/jewellery-green-cord.jpg"
+              alt="Green olive cord necklace"
+              width="1200"
+              height="1500"
+              decoding="async"
+              data-jewellery-img
+              data-i18n-alt="jewGreenCordAlt"
+            >
+            <figcaption data-i18n="jewGreenCordCap">Cord necklace</figcaption>
+          </figure>
+          <figure class="jewellery-shot reveal reveal-delay-1">
+            <img
+              src="media/jewellery-green-chain.jpg"
+              alt="Green olive chain necklace"
+              width="1200"
+              height="1500"
+              decoding="async"
+              data-jewellery-img
+              data-i18n-alt="jewGreenChainAlt"
+            >
+            <figcaption data-i18n="jewGreenChainCap">Chain necklace</figcaption>
+          </figure>
+          <figure class="jewellery-shot reveal reveal-delay-2">
+            <img
+              src="media/jewellery-green-brooch.jpg"
+              alt="Green olive brooch"
+              width="1200"
+              height="1500"
+              decoding="async"
+              data-jewellery-img
+              data-i18n-alt="jewGreenBroochAlt"
+            >
+            <figcaption data-i18n="jewGreenBroochCap">Brooch</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="jewellery-set is-black" id="black">
+        <div class="jewellery-set-copy wrap">
+          <p class="kicker reveal" data-i18n="jewBlackKicker">Black olive</p>
+          <h3 class="reveal reveal-delay-1" data-i18n="jewBlackTitle">Black olive necklace &amp; brooch</h3>
+          <p class="lede reveal reveal-delay-2" data-i18n="jewBlackBody">Choose a braided cord or a gold chain necklace with a black olive pendant, and a matching black olive brooch — quiet, enduring, and ready to wear.</p>
+        </div>
+        <div class="jewellery-set-gallery is-triple">
+          <figure class="jewellery-shot reveal">
+            <img
+              src="media/jewellery-black-cord.jpg"
+              alt="Black olive cord necklace"
+              width="1200"
+              height="1500"
+              decoding="async"
+              data-jewellery-img
+              data-i18n-alt="jewBlackCordAlt"
+            >
+            <figcaption data-i18n="jewBlackCordCap">Cord necklace</figcaption>
+          </figure>
+          <figure class="jewellery-shot reveal reveal-delay-1">
+            <img
+              src="media/jewellery-black-chain.jpg"
+              alt="Black olive chain necklace"
+              width="1200"
+              height="1500"
+              decoding="async"
+              data-jewellery-img
+              data-i18n-alt="jewBlackChainAlt"
+            >
+            <figcaption data-i18n="jewBlackChainCap">Chain necklace</figcaption>
+          </figure>
+          <figure class="jewellery-shot reveal reveal-delay-2">
+            <img
+              src="media/jewellery-black-brooch.jpg"
+              alt="Black olive brooch"
+              width="1200"
+              height="1500"
+              decoding="async"
+              data-jewellery-img
+              data-i18n-alt="jewBlackBroochAlt"
+            >
+            <figcaption data-i18n="jewBlackBroochCap">Brooch</figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <section id="reserve" class="jewellery-reserve">
+      <div class="wrap jewellery-reserve-grid">
+        <div class="jewellery-reserve-copy">
+          <p class="kicker reveal" data-i18n="jewFormKicker">Reserve</p>
+          <h2 class="section-title reveal reveal-delay-1" data-i18n="jewFormTitle">Hold a piece for yourself.</h2>
+          <p class="lede reveal reveal-delay-2" data-i18n="jewFormLede">Tell us which olive to set aside. This is a request only. No payment is taken here.</p>
+        </div>
+        <div class="jewellery-reserve-form reveal">
+          <form id="reserve-form">
+            <div class="fields">
+              <label>
+                <span data-i18n="labelName">Name</span>
+                <input id="reserve-name" name="name" type="text" required autocomplete="name" data-i18n-placeholder="phName" placeholder="Your name">
+              </label>
+              <label>
+                <span data-i18n="labelEmail">Email</span>
+                <input id="reserve-email" name="email" type="email" required autocomplete="email" data-i18n-placeholder="phEmail" placeholder="you@example.com">
+              </label>
+              <label>
+                <span data-i18n="jewLabelPiece">Piece</span>
+                <select id="bottle" name="bottle" required>
+                  <option value="" data-i18n="jewPiecePlaceholder">Choose a piece</option>
+                  <option value="jewellery-green-cord" selected data-i18n="jewGreenCordOption">Green olive · cord necklace</option>
+                  <option value="jewellery-green-chain" data-i18n="jewGreenChainOption">Green olive · chain necklace</option>
+                  <option value="jewellery-green-brooch" data-i18n="jewGreenBroochOption">Green olive · brooch</option>
+                  <option value="jewellery-black-cord" data-i18n="jewBlackCordOption">Black olive · cord necklace</option>
+                  <option value="jewellery-black-chain" data-i18n="jewBlackChainOption">Black olive · chain necklace</option>
+                  <option value="jewellery-black-brooch" data-i18n="jewBlackBroochOption">Black olive · brooch</option>
+                </select>
+              </label>
+              <label>
+                <span data-i18n="labelNote">Note</span>
+                <textarea id="reserve-note" name="note" data-i18n-placeholder="phNote" placeholder="Optional note"></textarea>
+              </label>
+              <button class="btn-jewellery" type="submit" data-i18n="jewSubmit">Request this piece</button>
+            </div>
+          </form>
+          <div id="reserve-done" class="done" hidden role="status">
+            <h3 data-i18n="jewDoneTitle">The piece is held.</h3>
+            <p data-i18n="jewDoneBody">This is a request only. We will write to you about this piece. No payment was taken.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand-block">
+          <p class="footer-brand">OLIEN ARTUK</p>
+          <p class="footer-tagline" data-i18n="footerTagline">Every oil measured for a plate.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footerColCollections">Collections</p>
+            <nav class="footer-links" aria-label="Footer">
+              <a href="index.html" data-i18n="navHome">Home</a>
+              <a href="red-wine-collection.html" data-i18n="navRed">Red Wine</a>
+              <a href="white-wine-collection.html" data-i18n="navWhite">White Wine</a>
+              <a href="carpaccio-collection.html" data-i18n="navCarpaccio">Carpaccio</a>
+              <a href="olive-jewellery.html" data-i18n="navJewellery">Jewellery</a>
+              <a href="#reserve" data-i18n="navReserve">Reserve</a>
+              <a href="contact.html" data-i18n="navContact">Contact</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footerColEstate">Estate</p>
+            <p data-i18n="footerPlace">Bursa, Türkiye</p>
+            <p data-i18n="footerLine">Extra virgin · Lot verified · dark glass</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy" data-i18n="footerCopy">© Olien Artuk</p>
+        <p class="footer-legal" data-i18n="footerLegal">Single estate · Cold pressed</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/brand.js"></script>
+</body>
+</html>

@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OLIEN ARTUK — Extra virgin olive oil from Türkiye</title>
-  <meta name="description" content="OLIEN ARTUK. Cold-pressed extra virgin olive oil. Red Wine Collection and White Wine Collection from Bursa, Türkiye.">
-  <meta name="theme-color" content="#FFFFFF">
+  <meta name="description" content="OLIEN ARTUK. Lot-verified extra virgin olive oil from Bursa, Türkiye. Red Wine for cooked meat. Carpaccio for cold thin slices. White Wine for the sea.">
+  <meta name="theme-color" content="#1A2420">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@360;460;560&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@360;460;560&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -34,17 +34,20 @@
   </script>
   <link rel="stylesheet" href="assets/brand.css">
 </head>
-<body class="brand" data-page="home">
+<body class="brand home-page" data-page="home">
   <div class="grain" aria-hidden="true"></div>
   <div class="progress" id="progress" aria-hidden="true"></div>
 
-  <header class="site-header" id="site-header">
+  <header class="site-header is-home" id="site-header">
     <a class="wordmark" href="index.html">OLIEN ARTUK</a>
     <nav id="nav" class="nav" aria-label="Sections">
       <a href="red-wine-collection.html" data-i18n="navRed">Red Wine</a>
       <a href="white-wine-collection.html" data-i18n="navWhite">White Wine</a>
+      <a href="carpaccio-collection.html" data-i18n="navCarpaccio">Carpaccio</a>
+      <a href="olive-jewellery.html" data-i18n="navJewellery">Jewellery</a>
       <a href="#craft" data-i18n="navCraft">Craft</a>
       <a href="#reserve" data-i18n="navReserve">Reserve</a>
+      <a href="contact.html" data-i18n="navContact">Contact</a>
     </nav>
     <div class="tools">
       <div class="lang" role="group" data-i18n-aria="langGroup" aria-label="Language">
@@ -56,86 +59,192 @@
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="wrap">
-        <p class="eyebrow reveal" data-i18n="heroEyebrow">Single estate · Cold pressed</p>
+    <section class="home-hero" aria-label="OLIEN ARTUK">
+      <div class="home-hero-media" aria-hidden="true">
+        <video
+          class="home-hero-video"
+          data-autoplay-video
+          muted
+          playsinline
+          loop
+          preload="metadata"
+          poster="media/red-scroll-poster.jpg"
+        >
+          <source src="media/red-collection.mp4" type="video/mp4">
+        </video>
+        <div class="home-hero-veil"></div>
+      </div>
+      <div class="home-hero-copy">
+        <p class="home-brand reveal">OLIEN ARTUK</p>
         <h1 class="reveal reveal-delay-1">
           <span data-i18n="heroTitleA">Oil shaped</span>
           <em data-i18n="heroTitleB">for the table.</em>
         </h1>
-        <p class="lede reveal reveal-delay-2" data-i18n="heroLede">OLIEN ARTUK presses hand-picked olives into numbered lots for the meal, not the pantry. Two collections. One estate standard.</p>
-        <div class="hero-actions reveal reveal-delay-3">
-          <a class="btn-solid" href="#collections" data-i18n="heroCta">Explore the collections</a>
-          <a class="btn-ghost" href="#craft" data-i18n="heroMore">How we press</a>
+        <p class="home-hero-lede reveal reveal-delay-2" data-i18n="heroLede">Numbered lots for the meal, not the pantry. Intensity follows the dish.</p>
+        <div class="home-hero-actions reveal reveal-delay-3">
+          <a class="btn-home" href="#collections" data-i18n="heroCta">Explore the collections</a>
+          <a class="btn-home-ghost" href="#craft" data-i18n="heroMore">How we press</a>
         </div>
-        <p class="hero-meta reveal reveal-delay-3" data-i18n="heroMeta">Bursa, Türkiye · Extra virgin · 500 ml</p>
       </div>
     </section>
 
-    <section id="collections">
-      <div class="wrap">
+    <section id="collections" class="home-chapters">
+      <header class="home-chapter-intro wrap">
         <p class="kicker reveal" data-i18n="collectionsKicker">The collections</p>
-        <h2 class="section-title reveal reveal-delay-1" data-i18n="collectionsTitle">Two bottles. Two tables.</h2>
-        <p class="lede reveal reveal-delay-2" data-i18n="collectionsLede">Each collection is built for a different meal. Open a page to read the notes, the pairings, and the press.</p>
-        <div class="collection-grid">
-          <a class="collection-card is-red reveal" href="red-wine-collection.html">
-            <div class="card-media">
-              <img src="media/red-bottle.jpg" alt="OLIEN ARTUK Red Wine Collection bottle">
-            </div>
-            <div class="card-body">
-              <p class="kicker" data-i18n="redKicker">Collection 01</p>
-              <h3 data-i18n="redCardTitle">Red Wine Collection</h3>
-              <p data-i18n="redCardBody">Deep, peppery, and built for red meat and aged wines.</p>
-              <span class="card-link" data-i18n="cardCta">View product</span>
-            </div>
-          </a>
-          <a class="collection-card is-white reveal reveal-delay-1" href="white-wine-collection.html">
-            <div class="card-media">
-              <img src="media/white-bottle.jpg" alt="OLIEN ARTUK White Wine Collection bottle">
-            </div>
-            <div class="card-body">
-              <p class="kicker" data-i18n="whiteKicker">Collection 02</p>
-              <h3 data-i18n="whiteCardTitle">White Wine Collection</h3>
-              <p data-i18n="whiteCardBody">Bright, clean, and made for seafood, citrus, and white wine.</p>
-              <span class="card-link" data-i18n="cardCta">View product</span>
-            </div>
-          </a>
+        <h2 class="section-title reveal reveal-delay-1" data-i18n="collectionsTitle">Three bottles. Three tables.</h2>
+      </header>
+
+      <a class="home-chapter is-red reveal" href="red-wine-collection.html">
+        <div class="home-chapter-bg" aria-hidden="true">
+          <video
+            data-autoplay-video
+            muted
+            playsinline
+            loop
+            preload="metadata"
+            poster="media/red-table.jpg"
+          >
+            <source src="media/red-collection.mp4" type="video/mp4">
+          </video>
+          <div class="home-chapter-shade"></div>
         </div>
+        <div class="home-chapter-copy">
+          <p class="kicker" data-i18n="redKicker">Collection 01</p>
+          <h3>
+            <span data-i18n="redCardTitleA">Red Wine</span>
+            <em data-i18n="redCardTitleB">Collection</em>
+          </h3>
+          <p data-i18n="redCardBody">Medium–robust, bitter and peppery. For braised meat, winter menus, and structured reds.</p>
+          <span class="home-chapter-cta" data-i18n="cardCta">Enter the collection</span>
+        </div>
+      </a>
+
+      <a class="home-chapter is-white reveal" href="white-wine-collection.html">
+        <div class="home-chapter-bg" aria-hidden="true">
+          <video
+            data-autoplay-video
+            muted
+            playsinline
+            loop
+            preload="metadata"
+            poster="media/white-table.jpg"
+          >
+            <source src="media/white-collection.mp4" type="video/mp4">
+          </video>
+          <div class="home-chapter-shade"></div>
+        </div>
+        <div class="home-chapter-copy">
+          <p class="kicker" data-i18n="whiteKicker">Collection 02</p>
+          <h3>
+            <span data-i18n="whiteCardTitleA">White Wine</span>
+            <em data-i18n="whiteCardTitleB">Collection</em>
+          </h3>
+          <p data-i18n="whiteCardBody">Delicate–medium, herbaceous, low bitterness. For seafood, citrus, and white wine.</p>
+          <span class="home-chapter-cta" data-i18n="cardCta">Enter the collection</span>
+        </div>
+      </a>
+
+      <a class="home-chapter is-carpaccio reveal" href="carpaccio-collection.html">
+        <div class="home-chapter-bg" aria-hidden="true">
+          <img src="media/lifestyle-pour-bread.jpg" alt="" width="1024" height="1024" decoding="async">
+          <div class="home-chapter-shade"></div>
+        </div>
+        <div class="home-chapter-copy">
+          <p class="kicker" data-i18n="carpaccioKicker">Collection 03</p>
+          <h3>
+            <span data-i18n="carpaccioCardTitleA">Carpaccio</span>
+            <em data-i18n="carpaccioCardTitleB">Collection</em>
+          </h3>
+          <p data-i18n="carpaccioCardBody">Mid-light, herbaceous and almond. For raw beef, tuna, salmon, vegetables, and fruit.</p>
+          <span class="home-chapter-cta" data-i18n="cardCta">Enter the collection</span>
+        </div>
+      </a>
+
+      <a class="home-chapter is-jewellery reveal" href="olive-jewellery.html">
+        <div class="home-chapter-bg" aria-hidden="true">
+          <img src="media/jewellery-hero.jpg" alt="" width="1200" height="1500" decoding="async" onerror="this.classList.add('broken')">
+          <div class="home-chapter-shade"></div>
+        </div>
+        <div class="home-chapter-copy">
+          <p class="kicker" data-i18n="jewSymbolKicker">Quiet luxury · Mediterranean heritage</p>
+          <h3 data-i18n="jewCardTitle">The Olive, Reimagined.</h3>
+          <p data-i18n="jewCardBody">Timeless jewellery inspired by the olive — a symbol of life, wisdom and abundance.</p>
+          <span class="home-chapter-cta" data-i18n="cardCta">Enter the collection</span>
+        </div>
+      </a>
+    </section>
+
+    <section id="principle" class="home-principle">
+      <div class="home-principle-media" aria-hidden="true" data-principle-rotate>
+        <video
+          class="is-active"
+          data-principle-clip
+          muted
+          playsinline
+          preload="metadata"
+          poster="media/red-table.jpg"
+        >
+          <source src="media/red-collection.mp4" type="video/mp4">
+        </video>
+        <video
+          data-principle-clip
+          muted
+          playsinline
+          preload="metadata"
+          poster="media/white-table.jpg"
+        >
+          <source src="media/white-collection.mp4" type="video/mp4">
+        </video>
+        <div class="home-principle-veil"></div>
+      </div>
+      <div class="wrap home-principle-copy reveal">
+        <p class="kicker" data-i18n="principleKicker">The principle</p>
+        <h2 class="section-title" data-i18n="principleTitle">Match the dish. Then the glass.</h2>
+        <p class="lede" data-i18n="principleLede">A firmer oil for cooked red meat. A mid pour for cold, thin slices. A lighter oil for the sea. Each lot is written for the table first.</p>
       </div>
     </section>
 
-    <section id="craft">
-      <div class="wrap">
-        <p class="kicker reveal" data-i18n="craftKicker">The craft</p>
-        <h2 class="section-title reveal reveal-delay-1" data-i18n="craftTitle">Pressed once. Kept honest.</h2>
-        <div class="craft-grid">
-          <article class="craft-card reveal">
+    <section id="craft" class="home-craft">
+      <div class="wrap home-craft-grid">
+        <div class="home-craft-lead">
+          <p class="kicker reveal" data-i18n="craftKicker">The craft</p>
+          <h2 class="section-title reveal reveal-delay-1" data-i18n="craftTitle">Pressed once. Kept honest.</h2>
+          <p class="lede reveal reveal-delay-2" data-i18n="whyLede">Intensity chosen for the meal. Freshness checked by the lot. Dark glass for what the press released.</p>
+        </div>
+        <ol class="home-craft-steps">
+          <li class="reveal">
             <span class="num">01</span>
-            <h3 data-i18n="craft1">Pick</h3>
-            <p data-i18n="craft1Body">Finest hand-picked olives from a single estate.</p>
-          </article>
-          <article class="craft-card reveal reveal-delay-1">
+            <div>
+              <h3 data-i18n="craft1">Pick</h3>
+              <p data-i18n="craft1Body">Hand-picked olives from a single estate, chosen for the collection’s intensity.</p>
+            </div>
+          </li>
+          <li class="reveal reveal-delay-1">
             <span class="num">02</span>
-            <h3 data-i18n="craft2">Press</h3>
-            <p data-i18n="craft2Body">Cold pressed the same day, nothing blended in.</p>
-          </article>
-          <article class="craft-card reveal reveal-delay-2">
+            <div>
+              <h3 data-i18n="craft2">Press</h3>
+              <p data-i18n="craft2Body">Cold pressed the same day. Nothing blended in. Written by panel and lot analysis.</p>
+            </div>
+          </li>
+          <li class="reveal reveal-delay-2">
             <span class="num">03</span>
-            <h3 data-i18n="craft3">Bottle</h3>
-            <p data-i18n="craft3Body">Dark glass, sealed for the table, not the shelf.</p>
-          </article>
-        </div>
+            <div>
+              <h3 data-i18n="craft3">Bottle</h3>
+              <p data-i18n="craft3Body">Dark glass that shields light and air. Sealed for the table, not the shelf.</p>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <section id="reserve">
-      <div class="wrap reserve-grid">
-        <div>
+    <section id="reserve" class="home-reserve">
+      <div class="wrap home-reserve-grid">
+        <div class="home-reserve-copy">
           <p class="kicker reveal" data-i18n="formKicker">Reserve</p>
           <h2 class="section-title reveal reveal-delay-1" data-i18n="formTitle">Hold a bottle for your table.</h2>
           <p class="lede reveal reveal-delay-2" data-i18n="formLede">Tell us which collection to set aside. This is a request only. No payment is taken here.</p>
         </div>
-        <div class="reserve-card reveal">
+        <div class="home-reserve-form reveal">
           <form id="reserve-form">
             <div class="fields">
               <label>
@@ -152,13 +261,14 @@
                   <option value="" data-i18n="bottlePlaceholder">Choose a collection</option>
                   <option value="red" data-i18n="redTitle">Red Wine Collection</option>
                   <option value="white" data-i18n="whiteTitle">White Wine Collection</option>
+                  <option value="carpaccio" data-i18n="carpaccioTitle">Carpaccio Collection</option>
                 </select>
               </label>
               <label>
                 <span data-i18n="labelNote">Note</span>
                 <textarea id="reserve-note" name="note" data-i18n-placeholder="phNote" placeholder="Optional note"></textarea>
               </label>
-              <button class="btn-solid" type="submit" data-i18n="submit">Request this lot</button>
+              <button class="btn-home" type="submit" data-i18n="submit">Request this lot</button>
             </div>
           </form>
           <div id="reserve-done" class="done" hidden role="status">
@@ -170,19 +280,37 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap footer-row">
-      <div>
-        <p class="footer-brand">OLIEN ARTUK</p>
-        <p data-i18n="footerPlace">Bursa, Türkiye</p>
-        <p data-i18n="footerLine">Extra virgin · Cold pressed · 500 ml</p>
+  <footer class="site-footer home-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand-block">
+          <p class="footer-brand">OLIEN ARTUK</p>
+          <p class="footer-tagline" data-i18n="footerTagline">Every oil measured for a plate.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footerColCollections">Collections</p>
+            <nav class="footer-links" aria-label="Footer">
+              <a href="red-wine-collection.html" data-i18n="navRed">Red Wine</a>
+              <a href="white-wine-collection.html" data-i18n="navWhite">White Wine</a>
+              <a href="carpaccio-collection.html" data-i18n="navCarpaccio">Carpaccio</a>
+              <a href="olive-jewellery.html" data-i18n="navJewellery">Jewellery</a>
+              <a href="#craft" data-i18n="navCraft">Craft</a>
+              <a href="#reserve" data-i18n="navReserve">Reserve</a>
+              <a href="contact.html" data-i18n="navContact">Contact</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footerColEstate">Estate</p>
+            <p data-i18n="footerPlace">Bursa, Türkiye</p>
+            <p data-i18n="footerLine">Extra virgin · Lot verified · dark glass</p>
+          </div>
+        </div>
       </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="red-wine-collection.html" data-i18n="navRed">Red Wine</a>
-        <a href="white-wine-collection.html" data-i18n="navWhite">White Wine</a>
-        <a href="#craft" data-i18n="navCraft">Craft</a>
-        <a href="#reserve" data-i18n="navReserve">Reserve</a>
-      </nav>
+      <div class="footer-bottom">
+        <p class="footer-copy" data-i18n="footerCopy">© Olien Artuk</p>
+        <p class="footer-legal" data-i18n="footerLegal">Single estate · Cold pressed</p>
+      </div>
     </div>
   </footer>
 

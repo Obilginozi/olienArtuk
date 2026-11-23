@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>White Wine Collection — OLIEN ARTUK</title>
-  <meta name="description" content="OLIEN ARTUK White Wine Collection. Extra virgin olive oil from Bursa, Türkiye. Cold pressed for seafood and white wine.">
-  <meta name="theme-color" content="#FFFFFF">
+  <meta name="description" content="OLIEN ARTUK White Wine Collection. Delicate–medium extra virgin olive oil for seafood, citrus, and white wine. Lot verified. Bursa, Türkiye.">
+  <meta name="theme-color" content="#3A3220">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@360;460;560&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@360;460;560&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -34,7 +34,7 @@
   </script>
   <link rel="stylesheet" href="assets/brand.css">
 </head>
-<body class="brand product-page is-white" data-page="white">
+<body class="brand product-page is-white has-scroll-rail" data-page="white">
   <div class="grain" aria-hidden="true"></div>
   <div class="progress" id="progress" aria-hidden="true"></div>
 
@@ -44,7 +44,10 @@
       <a href="index.html" data-i18n="navHome">Home</a>
       <a href="red-wine-collection.html" data-i18n="navRed">Red Wine</a>
       <a class="is-active" href="white-wine-collection.html" data-i18n="navWhite">White Wine</a>
+      <a href="carpaccio-collection.html" data-i18n="navCarpaccio">Carpaccio</a>
+      <a href="olive-jewellery.html" data-i18n="navJewellery">Jewellery</a>
       <a href="#reserve" data-i18n="navReserve">Reserve</a>
+      <a href="contact.html" data-i18n="navContact">Contact</a>
     </nav>
     <div class="tools">
       <div class="lang" role="group" data-i18n-aria="langGroup" aria-label="Language">
@@ -55,145 +58,191 @@
     </div>
   </header>
 
-  <main>
-    <section class="product-pin" data-product-pin>
-      <div class="product-pin-media">
-        <video data-pin-video muted loop playsinline autoplay preload="auto" poster="media/white-bottle.jpg">
-          <source src="media/white-collection.mp4" type="video/mp4">
-        </video>
-        <div class="product-pin-shade" data-pin-shade></div>
+  <aside class="scroll-rail" data-scroll-rail aria-hidden="true">
+    <canvas
+      class="scroll-rail-canvas"
+      data-scroll-frames
+      data-frame-path="media/white-scroll-frames/"
+      data-frame-ext="jpg"
+      data-frame-count="148"
+      data-frame-pad="3"
+      width="540"
+      height="960"
+    ></canvas>
+  </aside>
+
+  <div class="product-stage" data-product-stage aria-hidden="true">
+    <div class="product-stage-bg"></div>
+    <img
+      class="product-stage-bottle"
+      src="media/white-bottle-hero.png"
+      alt=""
+      width="768"
+      height="1024"
+      decoding="async"
+    >
+    <div class="product-stage-fade"></div>
+  </div>
+
+  <main class="scroll-rail-main" data-scroll-rail-main>
+    <section class="product-panel is-hero rail-hero">
+      <div class="wrap product-hero-grid is-rail">
+        <div class="product-copy">
+          <p class="kicker reveal" data-i18n="whiteKicker">Collection 02</p>
+          <h1 class="reveal reveal-delay-1">
+            <span data-i18n="whiteHeroA">White Wine</span>
+            <em data-i18n="whiteHeroB">Collection</em>
+          </h1>
+          <p class="lede reveal reveal-delay-2" data-i18n="whiteLede">A delicate–medium oil for the sea. Herbaceous fruit, soft bitterness, and a finish that leaves room for white fish, scallop, shellfish, citrus, and white wine.</p>
+          <div class="chip-row reveal reveal-delay-3">
+            <span class="chip" data-i18n="chipBursa">Bursa, Türkiye</span>
+            <span class="chip" data-i18n="chipEstate">Single estate</span>
+            <span class="chip" data-i18n="chipHand">Hand picked</span>
+            <span class="chip" data-i18n="chipVolume">500 ml</span>
+          </div>
+          <div class="hero-actions reveal reveal-delay-3">
+            <a class="btn-solid" href="#reserve" data-reserve="white" data-i18n="reserveBtn">Reserve this bottle</a>
+            <a class="btn-ghost" href="#profile" data-i18n="whiteTasteKicker">The profile</a>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="product-pin-content">
-        <section class="product-panel is-hero">
-          <div class="wrap product-hero-grid">
-            <div class="product-copy">
-              <p class="kicker reveal" data-i18n="whiteKicker">Collection 02</p>
-              <h1 class="reveal reveal-delay-1">
-                <span data-i18n="whiteHeroA">White Wine</span>
-                <em data-i18n="whiteHeroB">Collection</em>
-              </h1>
-              <p class="lede reveal reveal-delay-2" data-i18n="whiteLede">A brighter oil for the sea. Clean fruit, citrus lift, and a finish that leaves room for shellfish and white wine.</p>
-              <div class="chip-row reveal reveal-delay-3">
-                <span class="chip" data-i18n="chipBursa">Bursa, Türkiye</span>
-                <span class="chip" data-i18n="chipEstate">Single estate</span>
-                <span class="chip" data-i18n="chipHand">Hand picked</span>
-                <span class="chip" data-i18n="chipVolume">500 ml</span>
-              </div>
-              <div class="hero-actions reveal reveal-delay-3">
-                <a class="btn-solid" href="#reserve" data-reserve="white" data-i18n="reserveBtn">Reserve this bottle</a>
-                <a class="btn-ghost" href="#profile" data-i18n="whiteTasteKicker">The profile</a>
-              </div>
-            </div>
-            <div class="bottle-float reveal">
-              <img src="media/white-bottle.jpg" alt="OLIEN ARTUK White Wine Collection bottle" data-parallax="0.08">
-            </div>
+    <section class="product-panel" id="profile">
+      <div class="wrap">
+        <div class="feature-sheet reveal">
+          <p class="kicker" data-i18n="whiteTasteKicker">The profile</p>
+          <h2 class="section-title" data-i18n="whiteTasteTitle">What you taste.</h2>
+          <p class="sheet-lede" data-i18n="whiteTasteLede">Delicate to medium intensity. Herbaceous and almond-leaning fruit, with bitterness kept low enough for white fish, scallop carpaccio, and a first sip of sparkling wine.</p>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="num">01</span>
+              <h3 data-i18n="whiteF1">Fruit</h3>
+              <p data-i18n="whiteF1Body">Green, herbaceous fruit. Soft almond and cool garden notes.</p>
+            </article>
+            <article class="feature-card">
+              <span class="num">02</span>
+              <h3 data-i18n="whiteF2">Structure</h3>
+              <p data-i18n="whiteF2Body">Low–medium bitterness and a gentle spice — precise, never sharp.</p>
+            </article>
+            <article class="feature-card">
+              <span class="num">03</span>
+              <h3 data-i18n="whiteF3">Finish</h3>
+              <p data-i18n="whiteF3Body">Clean and light. Ready for the sea and finer whites.</p>
+            </article>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <section class="product-panel" id="profile">
-          <div class="wrap">
-            <div class="feature-sheet reveal">
-              <p class="kicker" data-i18n="whiteTasteKicker">The profile</p>
-              <h2 class="section-title" data-i18n="whiteTasteTitle">What you taste.</h2>
-              <div class="feature-grid">
-                <article class="feature-card">
-                  <span class="num">01</span>
-                  <h3 data-i18n="whiteF1">Nose</h3>
-                  <p data-i18n="whiteF1Body">Fresh green fruit, lemon peel, cool herbs.</p>
-                </article>
-                <article class="feature-card">
-                  <span class="num">02</span>
-                  <h3 data-i18n="whiteF2">Palate</h3>
-                  <p data-i18n="whiteF2Body">Bright olive, soft bitterness, a clean mid-palate.</p>
-                </article>
-                <article class="feature-card">
-                  <span class="num">03</span>
-                  <h3 data-i18n="whiteF3">Finish</h3>
-                  <p data-i18n="whiteF3Body">Light, precise, ready for seafood and white wine.</p>
-                </article>
-              </div>
-            </div>
+    <section class="product-panel">
+      <div class="wrap">
+        <div class="feature-sheet reveal">
+          <p class="kicker" data-i18n="whiteSpecKicker">The details</p>
+          <h2 class="section-title" data-i18n="whiteSpecTitle">Made to be measured.</h2>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <strong data-i18n="whiteS1">Intensity</strong>
+              <p data-i18n="whiteS1Body">Delicate–medium · herbaceous</p>
+            </article>
+            <article class="spec-card">
+              <strong data-i18n="whiteS2">Character</strong>
+              <p data-i18n="whiteS2Body">Soft phenol · low bitterness</p>
+            </article>
+            <article class="spec-card">
+              <strong data-i18n="whiteS3">Standard</strong>
+              <p data-i18n="whiteS3Body">Extra virgin · lot verified</p>
+            </article>
+            <article class="spec-card">
+              <strong data-i18n="whiteS4">Bottle</strong>
+              <p data-i18n="whiteS4Body">500 ml dark glass</p>
+            </article>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
 
-        <section class="product-panel">
-          <div class="wrap">
-            <div class="feature-sheet reveal">
-              <p class="kicker" data-i18n="whiteSpecKicker">The details</p>
-              <h2 class="section-title" data-i18n="whiteSpecTitle">Made to be measured.</h2>
-              <div class="spec-grid">
-                <article class="spec-card">
-                  <strong data-i18n="whiteS1">Origin</strong>
-                  <p data-i18n="whiteS1Body">Bursa, Türkiye</p>
-                </article>
-                <article class="spec-card">
-                  <strong data-i18n="whiteS2">Style</strong>
-                  <p data-i18n="whiteS2Body">Extra virgin · Cold pressed</p>
-                </article>
-                <article class="spec-card">
-                  <strong data-i18n="whiteS3">Estate</strong>
-                  <p data-i18n="whiteS3Body">Hand-picked single estate</p>
-                </article>
-                <article class="spec-card">
-                  <strong data-i18n="whiteS4">Volume</strong>
-                  <p data-i18n="whiteS4Body">500 ml dark glass</p>
-                </article>
-              </div>
-            </div>
+    <section class="product-panel">
+      <div class="wrap">
+        <div class="feature-sheet reveal">
+          <p class="kicker" data-i18n="whitePairKicker">The table</p>
+          <h2 class="section-title" data-i18n="whitePairTitle">How to pour it.</h2>
+          <p class="sheet-lede" data-i18n="whitePairLede">Built for the sea — including white fish and scallop carpaccio. Tuna, salmon, and raw beef belong to Carpaccio.</p>
+          <div class="pair-grid">
+            <article class="pair-card">
+              <h3 data-i18n="whiteP1">White fish &amp; scallop</h3>
+              <p data-i18n="whiteP1Body">Raw or cooked white fish, scallop, and shrimp. Fine almond, light spice.</p>
+            </article>
+            <article class="pair-card">
+              <h3 data-i18n="whiteP2">Cooked seafood</h3>
+              <p data-i18n="whiteP2Body">Shellfish and fuller whites. A slightly firmer pour for structure.</p>
+            </article>
+            <article class="pair-card">
+              <h3 data-i18n="whiteP3">Sparkling</h3>
+              <p data-i18n="whiteP3Body">Soft, round fruit so bitterness never spoils the first sip.</p>
+            </article>
           </div>
-        </section>
+          <div class="lifestyle-frame">
+            <img src="media/white-table.jpg" alt="White Wine Collection with seafood lunch">
+            <div class="shade"></div>
+            <p class="caption" data-i18n="whiteTableCap">For white fish, scallop, shellfish, and a pale glass of white.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section class="product-panel">
-          <div class="wrap">
-            <div class="feature-sheet reveal">
-              <p class="kicker" data-i18n="whitePairKicker">The table</p>
-              <h2 class="section-title" data-i18n="whitePairTitle">How to pour it.</h2>
-              <div class="pair-grid">
-                <article class="pair-card">
-                  <h3 data-i18n="whiteP1">Sea</h3>
-                  <p data-i18n="whiteP1Body">Oysters, grilled fish, lemon.</p>
-                </article>
-                <article class="pair-card">
-                  <h3 data-i18n="whiteP2">Wine</h3>
-                  <p data-i18n="whiteP2Body">Crisp whites and pale afternoon light.</p>
-                </article>
-                <article class="pair-card">
-                  <h3 data-i18n="whiteP3">Herb</h3>
-                  <p data-i18n="whiteP3Body">Parsley, olive, a crust of bread.</p>
-                </article>
-              </div>
-              <div class="lifestyle-frame">
-                <img src="media/white-table.jpg" alt="White Wine Collection with seafood lunch">
-                <div class="shade"></div>
-                <p class="caption" data-i18n="whiteTableCap">For oysters, grilled fish, and a pale glass of white.</p>
-              </div>
-            </div>
+    <section class="product-panel">
+      <div class="wrap">
+        <div class="feature-sheet reveal kitchen-sheet">
+          <p class="kicker" data-i18n="whiteKitchenKicker">In the kitchen</p>
+          <h2 class="section-title" data-i18n="whiteKitchenTitle">A house oil for the sea — and a careful open bottle.</h2>
+          <p class="sheet-lede" data-i18n="whiteKitchenBody">Delicate aromas are the most fragile. Prefer a smaller bottle, keep it dark and cool, and finish the plate rather than heating the oil hard.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-panel">
+      <div class="wrap">
+        <div class="feature-sheet reveal">
+          <p class="kicker" data-i18n="whiteStdKicker">The standard</p>
+          <h2 class="section-title" data-i18n="whiteStdTitle">Every lot, not every label.</h2>
+          <p class="sheet-lede" data-i18n="whiteStdLede">The same estate frame as Red — different intensity. Each White lot is held to sensory scores and laboratory freshness, then protected in dark glass.</p>
+          <div class="signal-grid">
+            <article class="signal-card">
+              <h3 data-i18n="whiteStd1">Sensory</h3>
+              <p data-i18n="whiteStd1Body">Defect-free extra virgin. Delicate–medium fruit with restrained bitterness and pungency.</p>
+            </article>
+            <article class="signal-card">
+              <h3 data-i18n="whiteStd2">Freshness</h3>
+              <p data-i18n="whiteStd2Body">Lot analysis for freshness markers. Chemistry kept well inside trade limits.</p>
+            </article>
+            <article class="signal-card">
+              <h3 data-i18n="whiteStd3">Protection</h3>
+              <p data-i18n="whiteStd3Body">Dark glass against light and oxygen. Best within a short open-bottle window.</p>
+            </article>
           </div>
-        </section>
+        </div>
       </div>
     </section>
 
     <div class="product-after">
-      <section>
-        <div class="wrap">
+      <div class="wrap product-after-panel">
+        <section class="product-after-cross">
           <div class="cross-link reveal">
-            <img src="media/red-bottle.jpg" alt="OLIEN ARTUK Red Wine Collection bottle">
+            <img src="media/carpaccio-bottle.jpg" alt="OLIEN ARTUK Carpaccio Collection bottle">
             <div>
               <p class="kicker" data-i18n="crossKicker">Also from the estate</p>
-              <h2 class="section-title" data-i18n="crossRedTitle">Prefer a darker pour?</h2>
-              <p class="lede" data-i18n="crossRedBody">Open the Red Wine Collection for grilled cuts and evening tables.</p>
+              <h2 class="section-title" data-i18n="crossCarpaccioTitle">Prefer a mid pour for cold plates?</h2>
+              <p class="lede" data-i18n="crossCarpaccioBody">Open the Carpaccio Collection for raw beef, tuna, salmon, vegetables, and fruit.</p>
               <div class="hero-actions">
-                <a class="btn-line" href="red-wine-collection.html" data-i18n="crossCta">Open collection</a>
+                <a class="btn-line" href="carpaccio-collection.html" data-i18n="crossCta">Open collection</a>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="reserve">
-        <div class="wrap reserve-grid">
-          <div>
+        <section id="reserve" class="product-after-reserve">
+          <div class="reserve-intro">
             <p class="kicker reveal" data-i18n="formKicker">Reserve</p>
             <h2 class="section-title reveal reveal-delay-1" data-i18n="formTitle">Hold a bottle for your table.</h2>
             <p class="lede reveal reveal-delay-2" data-i18n="formLede">Tell us which collection to set aside. This is a request only. No payment is taken here.</p>
@@ -215,6 +264,7 @@
                     <option value="" data-i18n="bottlePlaceholder">Choose a collection</option>
                     <option value="red" data-i18n="redTitle">Red Wine Collection</option>
                     <option value="white" selected data-i18n="whiteTitle">White Wine Collection</option>
+                    <option value="carpaccio" data-i18n="carpaccioTitle">Carpaccio Collection</option>
                   </select>
                 </label>
                 <label>
@@ -229,24 +279,42 @@
               <p data-i18n="doneBody">This is a request only. We will write to you about this lot. No payment was taken.</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-row">
-      <div>
-        <p class="footer-brand">OLIEN ARTUK</p>
-        <p data-i18n="footerPlace">Bursa, Türkiye</p>
-        <p data-i18n="footerLine">Extra virgin · Cold pressed · 500 ml</p>
+    <div class="wrap footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand-block">
+          <p class="footer-brand">OLIEN ARTUK</p>
+          <p class="footer-tagline" data-i18n="footerTagline">Every oil measured for a plate.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footerColCollections">Collections</p>
+            <nav class="footer-links" aria-label="Footer">
+              <a href="index.html" data-i18n="navHome">Home</a>
+              <a href="red-wine-collection.html" data-i18n="navRed">Red Wine</a>
+              <a href="white-wine-collection.html" data-i18n="navWhite">White Wine</a>
+              <a href="carpaccio-collection.html" data-i18n="navCarpaccio">Carpaccio</a>
+              <a href="olive-jewellery.html" data-i18n="navJewellery">Jewellery</a>
+              <a href="#reserve" data-i18n="navReserve">Reserve</a>
+              <a href="contact.html" data-i18n="navContact">Contact</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footerColEstate">Estate</p>
+            <p data-i18n="footerPlace">Bursa, Türkiye</p>
+            <p data-i18n="footerLine">Extra virgin · Lot verified · dark glass</p>
+          </div>
+        </div>
       </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="index.html" data-i18n="navHome">Home</a>
-        <a href="red-wine-collection.html" data-i18n="navRed">Red Wine</a>
-        <a href="white-wine-collection.html" data-i18n="navWhite">White Wine</a>
-        <a href="#reserve" data-i18n="navReserve">Reserve</a>
-      </nav>
+      <div class="footer-bottom">
+        <p class="footer-copy" data-i18n="footerCopy">© Olien Artuk</p>
+        <p class="footer-legal" data-i18n="footerLegal">Single estate · Cold pressed</p>
+      </div>
     </div>
   </footer>
 

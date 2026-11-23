@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carpaccio Collection — OLIEN ARTUK</title>
+  <meta name="description" content="OLIEN ARTUK Carpaccio Collection. Mid-light extra virgin olive oil for raw beef, tuna, salmon, vegetables, and fruit. Lot verified. Bursa, Türkiye.">
+  <meta name="theme-color" content="#2A3A28">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@360;460;560&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#121417',
+            leaf: '#2F4A3A',
+            accent: '#4A6670',
+            snow: '#FFFFFF',
+            mist: '#F4F6F8',
+            paper: '#E8ECF0',
+            clay: '#5A6870',
+            wine: '#3A2A2C'
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'serif'],
+            body: ['Manrope', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/brand.css">
+</head>
+<body class="brand product-page is-carpaccio has-scroll-rail" data-page="carpaccio">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <a class="wordmark" href="index.html">OLIEN ARTUK</a>
+    <nav id="nav" class="nav" aria-label="Sections">
+      <a href="index.html" data-i18n="navHome">Home</a>
+      <a href="red-wine-collection.html" data-i18n="navRed">Red Wine</a>
+      <a href="white-wine-collection.html" data-i18n="navWhite">White Wine</a>
+      <a class="is-active" href="carpaccio-collection.html" data-i18n="navCarpaccio">Carpaccio</a>
+      <a href="olive-jewellery.html" data-i18n="navJewellery">Jewellery</a>
+      <a href="#reserve" data-i18n="navReserve">Reserve</a>
+      <a href="contact.html" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="tools">
+      <div class="lang" role="group" data-i18n-aria="langGroup" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+      </div>
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav" data-i18n="menuOpen">Menu</button>
+    </div>
+  </header>
+
+  <aside class="scroll-rail" data-scroll-rail aria-hidden="true">
+    <img
+      class="scroll-rail-still"
+      src="media/carpaccio-bottle.jpg"
+      alt=""
+      width="764"
+      height="1024"
+      decoding="async"
+    >
+  </aside>
+
+  <div class="product-stage" data-product-stage aria-hidden="true">
+    <div class="product-stage-bg"></div>
+    <img
+      class="product-stage-bottle"
+      src="media/carpaccio-bottle-hero.png"
+      alt=""
+      width="655"
+      height="819"
+      decoding="async"
+    >
+    <div class="product-stage-fade"></div>
+  </div>
+
+  <main class="scroll-rail-main" data-scroll-rail-main>
+    <section class="product-panel is-hero rail-hero">
+      <div class="wrap product-hero-grid is-rail">
+        <div class="product-copy">
+          <p class="kicker reveal" data-i18n="carpaccioKicker">Collection 03</p>
+          <h1 class="reveal reveal-delay-1">
+            <span data-i18n="carpaccioHeroA">Carpaccio</span>
+            <em data-i18n="carpaccioHeroB">Collection</em>
+          </h1>
+          <p class="lede reveal reveal-delay-2" data-i18n="carpaccioLede">A mid-light finishing oil for cold, thin-sliced plates. Herbaceous fruit, almond, and balanced bitterness — clear enough to read on raw beef, tuna, salmon, vegetables, and fruit.</p>
+          <div class="chip-row reveal reveal-delay-3">
+            <span class="chip" data-i18n="chipBursa">Bursa, Türkiye</span>
+            <span class="chip" data-i18n="chipEvoo">Extra virgin</span>
+            <span class="chip" data-i18n="chipCold">Cold pressed</span>
+            <span class="chip" data-i18n="chipVolume">500 ml</span>
+          </div>
+          <div class="hero-actions reveal reveal-delay-3">
+            <a class="btn-solid" href="#reserve" data-reserve="carpaccio" data-i18n="reserveBtn">Reserve this bottle</a>
+            <a class="btn-ghost" href="#profile" data-i18n="carpaccioTasteKicker">The profile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-panel" id="profile">
+      <div class="wrap">
+        <div class="feature-sheet reveal">
+          <p class="kicker" data-i18n="carpaccioTasteKicker">The profile</p>
+          <h2 class="section-title" data-i18n="carpaccioTasteTitle">What you taste.</h2>
+          <p class="sheet-lede" data-i18n="carpaccioTasteLede">Medium fruit on the light side of the band. Green, herbaceous, and almond-leaning — with bitterness and pungency held at 3.0–4.0 so cold plates stay vivid, not overwhelmed.</p>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="num">01</span>
+              <h3 data-i18n="carpaccioF1">Fruit</h3>
+              <p data-i18n="carpaccioF1Body">Medium fruitiness (3.5–5.0). Tomato leaf, artichoke, cut grass, and soft almond.</p>
+            </article>
+            <article class="feature-card">
+              <span class="num">02</span>
+              <h3 data-i18n="carpaccioF2">Structure</h3>
+              <p data-i18n="carpaccioF2Body">Bitterness and pungency 3.0–4.0 — balanced, never robust enough to crush raw flesh.</p>
+            </article>
+            <article class="feature-card">
+              <span class="num">03</span>
+              <h3 data-i18n="carpaccioF3">Finish</h3>
+              <p data-i18n="carpaccioF3Body">Clean and aromatic on a cold slice. Presence without heat that lingers too hard.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-panel">
+      <div class="wrap">
+        <div class="feature-sheet reveal">
+          <p class="kicker" data-i18n="carpaccioSpecKicker">The details</p>
+          <h2 class="section-title" data-i18n="carpaccioSpecTitle">Made to be measured.</h2>
+          <div class="spec-grid">
+            <article class="spec-card">
+              <strong data-i18n="carpaccioS1">Intensity</strong>
+              <p data-i18n="carpaccioS1Body">Mid-light · herbaceous · almond</p>
+            </article>
+            <article class="spec-card">
+              <strong data-i18n="carpaccioS2">Character</strong>
+              <p data-i18n="carpaccioS2Body">~300–450 mg/kg phenols · balanced</p>
+            </article>
+            <article class="spec-card">
+              <strong data-i18n="carpaccioS3">Standard</strong>
+              <p data-i18n="carpaccioS3Body">Extra virgin · lot verified · defect 0</p>
+            </article>
+            <article class="spec-card">
+              <strong data-i18n="carpaccioS4">Bottle</strong>
+              <p data-i18n="carpaccioS4Body">500 ml · DAG ≥ 35% · PPP ≤ 17%</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-panel">
+      <div class="wrap">
+        <div class="feature-sheet reveal">
+          <p class="kicker" data-i18n="carpaccioPairKicker">The table</p>
+          <h2 class="section-title" data-i18n="carpaccioPairTitle">How to pour it.</h2>
+          <p class="sheet-lede" data-i18n="carpaccioPairLede">For raw and thin-sliced plates that need aroma without weight. White fish and scallop carpaccio stay with White Wine. Cooked red meat stays with Red.</p>
+          <div class="pair-grid">
+            <article class="pair-card">
+              <h3 data-i18n="carpaccioP1">Raw beef</h3>
+              <p data-i18n="carpaccioP1Body">Cold sirloin, thinly sliced. A mid pour that finishes the plate — never a marinade.</p>
+            </article>
+            <article class="pair-card">
+              <h3 data-i18n="carpaccioP2">Tuna &amp; salmon</h3>
+              <p data-i18n="carpaccioP2Body">Fatty raw fish that can carry balanced bitterness and clean green fruit.</p>
+            </article>
+            <article class="pair-card">
+              <h3 data-i18n="carpaccioP3">Vegetables &amp; fruit</h3>
+              <p data-i18n="carpaccioP3Body">Soft vegetables and fruit carpaccio. Herbaceous notes that stay articulate when cold.</p>
+            </article>
+          </div>
+          <div class="lifestyle-frame">
+            <img src="media/carpaccio-bottle.jpg" alt="OLIEN ARTUK Carpaccio Collection bottle">
+            <div class="shade"></div>
+            <p class="caption" data-i18n="carpaccioTableCap">For cold slices — beef, fatty fish, vegetables, and fruit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-panel">
+      <div class="wrap">
+        <div class="feature-sheet reveal kitchen-sheet">
+          <p class="kicker" data-i18n="carpaccioKitchenKicker">In the kitchen</p>
+          <h2 class="section-title" data-i18n="carpaccioKitchenTitle">Last pour on cold slices. Do not marinate.</h2>
+          <p class="sheet-lede" data-i18n="carpaccioKitchenBody">Carpaccio is finishing oil, not a cooking medium. Defects have nowhere to hide. Pour at the last moment so aroma still reads on a cold plate.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product-panel">
+      <div class="wrap">
+        <div class="feature-sheet reveal">
+          <p class="kicker" data-i18n="carpaccioStdKicker">The standard</p>
+          <h2 class="section-title" data-i18n="carpaccioStdTitle">Every lot, not every label.</h2>
+          <p class="sheet-lede" data-i18n="carpaccioStdLede">Unflavoured extra virgin — written to sensory scores and laboratory freshness, then sealed for the cold table. Variety names alone never write the mid rung.</p>
+          <div class="signal-grid">
+            <article class="signal-card">
+              <h3 data-i18n="carpaccioStd1">Sensory</h3>
+              <p data-i18n="carpaccioStd1Body">Defect-free extra virgin. Fruit 3.5–5.0; bitterness and pungency 3.0–4.0, well balanced.</p>
+            </article>
+            <article class="signal-card">
+              <h3 data-i18n="carpaccioStd2">Freshness</h3>
+              <p data-i18n="carpaccioStd2Body">Lot analysis for freshness markers. DAG ≥ 35%, PPP ≤ 17%. Chemistry kept inside trade limits.</p>
+            </article>
+            <article class="signal-card">
+              <h3 data-i18n="carpaccioStd3">Protection</h3>
+              <p data-i18n="carpaccioStd3Body">Protected glass against light and oxygen. Store cool — open bottles do not wait on aroma.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="product-after">
+      <div class="wrap product-after-panel">
+        <section class="product-after-cross">
+          <div class="cross-link reveal">
+            <img src="media/white-bottle.jpg" alt="OLIEN ARTUK White Wine Collection bottle">
+            <div>
+              <p class="kicker" data-i18n="crossKicker">Also from the estate</p>
+              <h2 class="section-title" data-i18n="crossWhiteTitle">Prefer a finer pour?</h2>
+              <p class="lede" data-i18n="crossWhiteBody">Open the White Wine Collection for white fish, scallop, shellfish, and finer whites.</p>
+              <div class="hero-actions">
+                <a class="btn-line" href="white-wine-collection.html" data-i18n="crossCta">Open collection</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="reserve" class="product-after-reserve">
+          <div class="reserve-intro">
+            <p class="kicker reveal" data-i18n="formKicker">Reserve</p>
+            <h2 class="section-title reveal reveal-delay-1" data-i18n="formTitle">Hold a bottle for your table.</h2>
+            <p class="lede reveal reveal-delay-2" data-i18n="formLede">Tell us which collection to set aside. This is a request only. No payment is taken here.</p>
+          </div>
+          <div class="reserve-card reveal">
+            <form id="reserve-form">
+              <div class="fields">
+                <label>
+                  <span data-i18n="labelName">Name</span>
+                  <input id="reserve-name" name="name" type="text" required autocomplete="name" data-i18n-placeholder="phName" placeholder="Your name">
+                </label>
+                <label>
+                  <span data-i18n="labelEmail">Email</span>
+                  <input id="reserve-email" name="email" type="email" required autocomplete="email" data-i18n-placeholder="phEmail" placeholder="you@example.com">
+                </label>
+                <label>
+                  <span data-i18n="labelBottle">Collection</span>
+                  <select id="bottle" name="bottle" required>
+                    <option value="" data-i18n="bottlePlaceholder">Choose a collection</option>
+                    <option value="red" data-i18n="redTitle">Red Wine Collection</option>
+                    <option value="white" data-i18n="whiteTitle">White Wine Collection</option>
+                    <option value="carpaccio" selected data-i18n="carpaccioTitle">Carpaccio Collection</option>
+                  </select>
+                </label>
+                <label>
+                  <span data-i18n="labelNote">Note</span>
+                  <textarea id="reserve-note" name="note" data-i18n-placeholder="phNote" placeholder="Optional note"></textarea>
+                </label>
+                <button class="btn-solid" type="submit" data-i18n="submit">Request this lot</button>
+              </div>
+            </form>
+            <div id="reserve-done" class="done" hidden role="status">
+              <h3 data-i18n="doneTitle">The bottle is held.</h3>
+              <p data-i18n="doneBody">This is a request only. We will write to you about this lot. No payment was taken.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand-block">
+          <p class="footer-brand">OLIEN ARTUK</p>
+          <p class="footer-tagline" data-i18n="footerTagline">Every oil measured for a plate.</p>
+        </div>
+        <div class="footer-cols">
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footerColCollections">Collections</p>
+            <nav class="footer-links" aria-label="Footer">
+              <a href="index.html" data-i18n="navHome">Home</a>
+              <a href="red-wine-collection.html" data-i18n="navRed">Red Wine</a>
+              <a href="white-wine-collection.html" data-i18n="navWhite">White Wine</a>
+              <a href="carpaccio-collection.html" data-i18n="navCarpaccio">Carpaccio</a>
+              <a href="olive-jewellery.html" data-i18n="navJewellery">Jewellery</a>
+              <a href="#reserve" data-i18n="navReserve">Reserve</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title" data-i18n="footerColEstate">Estate</p>
+            <p data-i18n="footerPlace">Bursa, Türkiye</p>
+            <p data-i18n="footerLine">Extra virgin · Lot verified · dark glass</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy" data-i18n="footerCopy">© Olien Artuk</p>
+        <p class="footer-legal" data-i18n="footerLegal">Single estate · Cold pressed</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/brand.js"></script>
+</body>
+</html>
