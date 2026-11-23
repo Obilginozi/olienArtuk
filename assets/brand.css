@@ -104,7 +104,7 @@ body.brand h3,
   font-weight: 600;
   font-size: 1.35rem;
   letter-spacing: -0.03em;
-  color: var(--ink);
+  color: var(--gold);
   text-decoration: none;
   white-space: nowrap;
 }
@@ -2787,7 +2787,10 @@ body.contact-page .site-header.is-contact.is-solid {
   border-color: rgba(232, 235, 230, 0.12);
 }
 
-body.contact-page .wordmark,
+body.contact-page .wordmark {
+  color: var(--gold);
+}
+
 body.contact-page .nav a,
 body.contact-page .menu-toggle,
 body.contact-page .lang button {
@@ -3104,7 +3107,10 @@ body.jewellery-page .site-header.is-jewellery.is-solid {
   border-color: rgba(232, 235, 230, 0.12);
 }
 
-body.jewellery-page .wordmark,
+body.jewellery-page .wordmark {
+  color: var(--gold);
+}
+
 body.jewellery-page .nav a,
 body.jewellery-page .menu-toggle,
 body.jewellery-page .lang button {
