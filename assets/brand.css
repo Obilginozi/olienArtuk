@@ -1754,14 +1754,14 @@ body.brand .product-after select {
     margin-right: auto;
   }
 
-  /* Bottle fixed to bottom-right on mobile — half desktop scale */
+  /* Tablet / narrow web: keep near-desktop bottle, pin bottom-right */
   .product-stage-bottle {
     top: auto !important;
     bottom: 0 !important;
     right: 0 !important;
     left: auto !important;
-    height: min(26vh, 210px);
-    max-width: min(26vw, 110px);
+    height: min(72vh, 640px);
+    max-width: min(42vw, 480px);
     opacity: 1;
     object-position: right bottom;
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 28%, #000 100%);
@@ -2115,12 +2115,13 @@ body.brand .product-after select {
     padding: 6px 11px;
   }
 
+  /* Phone only: half-scale bottle */
   .product-stage-bottle {
     top: auto !important;
     bottom: 0 !important;
     right: 0 !important;
-    max-width: min(24vw, 90px);
-    height: min(24vh, 180px);
+    max-width: min(26vw, 110px);
+    height: min(26vh, 210px);
   }
 
   body.has-scroll-rail .product-panel.is-hero {
