@@ -2649,11 +2649,33 @@ body.home-page .lede {
 
 .home-voices-tweet {
   margin-top: 20px;
-  min-height: 180px;
+  min-height: 120px;
 }
 
 .home-voices-tweet .twitter-tweet {
   margin: 0 !important;
+}
+
+.home-voices-tweet-quote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.home-voices-tweet-quote p {
+  margin: 0;
+  max-width: 28rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.45rem, 2.6vw, 1.95rem);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--home-ink);
+}
+
+.home-voices-tweet .home-voice-source {
+  margin-top: 18px;
 }
 
 .home-craft {
