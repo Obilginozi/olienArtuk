@@ -7,6 +7,12 @@
       titleCarpaccio: 'Carpaccio Collection — OLIEN ARTUK',
       titleJewellery: 'The Olive, Reimagined. — OLIEN ARTUK',
       titleContact: 'Contact — OLIEN ARTUK',
+      metaDescHome: 'OLIEN ARTUK. Lot-verified extra virgin olive oil from Bursa, Türkiye. Red Wine for cooked meat. Carpaccio for cold thin slices. White Wine for the sea.',
+      metaDescRed: 'OLIEN ARTUK Red Wine Collection. Medium–robust extra virgin olive oil for braised meat, winter menus, and structured reds. Lot verified. Bursa, Türkiye.',
+      metaDescWhite: 'OLIEN ARTUK White Wine Collection. Delicate–medium extra virgin olive oil for seafood, citrus, and white wine. Lot verified. Bursa, Türkiye.',
+      metaDescCarpaccio: 'OLIEN ARTUK Carpaccio Collection. Mid-light extra virgin olive oil for raw beef, tuna, salmon, vegetables, and fruit. Lot verified. Bursa, Türkiye.',
+      metaDescJewellery: 'OLIEN ARTUK jewellery. Timeless jewellery inspired by the olive — a symbol of life, wisdom and abundance. Quiet luxury, Mediterranean heritage.',
+      metaDescContact: 'Write to OLIEN ARTUK. Estate questions, lot requests, and jewellery — from Bursa, Türkiye.',
       langGroup: 'Language',
       menuOpen: 'Menu',
       menuClose: 'Close',
@@ -330,6 +336,12 @@
       titleCarpaccio: 'Carpaccio Koleksiyonu — OLIEN ARTUK',
       titleJewellery: 'Zeytin, Yeniden. — OLIEN ARTUK',
       titleContact: 'İletişim — OLIEN ARTUK',
+      metaDescHome: 'OLIEN ARTUK. Bursa, Türkiye’den lot doğrulamalı sızma zeytinyağı. Pişmiş et için Red Wine, soğuk dilimler için Carpaccio, deniz için White Wine.',
+      metaDescRed: 'OLIEN ARTUK Kırmızı Şarap Koleksiyonu. Uzun pişen et, kış menüsü ve yapılı kırmızılar için orta–sağlam sızma zeytinyağı. Lot doğrulamalı. Bursa, Türkiye.',
+      metaDescWhite: 'OLIEN ARTUK Beyaz Şarap Koleksiyonu. Deniz ürünleri, narenciye ve beyaz şarap için narin–orta sızma zeytinyağı. Lot doğrulamalı. Bursa, Türkiye.',
+      metaDescCarpaccio: 'OLIEN ARTUK Carpaccio Koleksiyonu. Çiğ dana, ton, somon, sebze ve meyve için orta-hafif sızma zeytinyağı. Lot doğrulamalı. Bursa, Türkiye.',
+      metaDescJewellery: 'OLIEN ARTUK mücevher. Zeytinden ilham alan zamansız parçalar — yaşam, bilgelik ve bolluğun simgesi. Sakin lüks, Akdeniz mirası.',
+      metaDescContact: 'OLIEN ARTUK’a yazın. Bahçe soruları, lot istekleri ve mücevher — Bursa, Türkiye.',
       langGroup: 'Dil',
       menuOpen: 'Menü',
       menuClose: 'Kapat',
@@ -672,6 +684,32 @@
     return dict.titleHome;
   }
 
+  function metaDescForPage(dict) {
+    if (page === 'red') return dict.metaDescRed;
+    if (page === 'white') return dict.metaDescWhite;
+    if (page === 'carpaccio') return dict.metaDescCarpaccio;
+    if (page === 'jewellery') return dict.metaDescJewellery;
+    if (page === 'contact') return dict.metaDescContact;
+    return dict.metaDescHome;
+  }
+
+  function setMeta(selector, attr, value) {
+    const el = document.querySelector(selector);
+    if (el && value != null) el.setAttribute(attr, value);
+  }
+
+  function syncDocumentMeta(dict) {
+    const title = titleForPage(dict);
+    const desc = metaDescForPage(dict);
+    const locale = lang === 'tr' ? 'tr_TR' : 'en_US';
+    setMeta('meta[name="description"]', 'content', desc);
+    setMeta('meta[property="og:title"]', 'content', title);
+    setMeta('meta[property="og:description"]', 'content', desc);
+    setMeta('meta[property="og:locale"]', 'content', locale);
+    setMeta('meta[name="twitter:title"]', 'content', title);
+    setMeta('meta[name="twitter:description"]', 'content', desc);
+  }
+
   const tweetHost = document.querySelector('[data-tweet-embed]');
   const tweetId = '2124034763149426959';
   const tweetUrl = `https://x.com/vedatmilor/status/${tweetId}`;
@@ -713,6 +751,7 @@
     const dict = copy[lang];
     document.documentElement.lang = lang;
     document.title = titleForPage(dict);
+    syncDocumentMeta(dict);
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const value = dict[el.dataset.i18n];
       if (value != null) el.textContent = value;

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://obilginozi.github.io/olienArtuk/sitemap.xml
